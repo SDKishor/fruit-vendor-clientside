@@ -21,8 +21,65 @@
   font-size: 50px;
 }
 
+.key_features {
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.features {
+  height: 70%;
+  width: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.features .option {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.features .option h3 {
+  font-size: 30px;
+  text-transform: uppercase;
+  color: white;
+  margin: 0px;
+}
+
+.features .option p {
+  font-size: 20px;
+  text-transform: capitalize;
+  color: white;
+  margin: 0px;
+  margin-top: 10px;
+}
+
+.features .option:nth-child(1) {
+  background-color: skyblue;
+}
+.features .option:nth-child(3) {
+  background-color: #ff6347e5;
+}
+.features .option:nth-child(2) {
+  background-color: plum;
+}
+
 @media (max-width: 700px) {
   .homePage {
     margin-top: 80px;
+  }
+  .banner {
+    height: 700px;
+    width: 100%;
+  }
+
+  .banner h2 {
+    width: 80%;
+    font-size: 40px;
   }
 }
