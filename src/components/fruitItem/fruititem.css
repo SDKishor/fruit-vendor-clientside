@@ -1,0 +1,54 @@
+.fruits {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+.fruits:hover {
+  box-shadow: 0 0 25px -10px #6ee776;
+}
+
+.fruitimage {
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.Serviceimage img {
+  height: 100%;
+}
+
+.serviceTitle {
+  margin: 0;
+  margin-top: 20px;
+  font-size: 24px;
+  color: #6ee776;
+}
+
+.fruits p {
+  margin: 0;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.fruits button {
+  background-color: #6ee776;
+  font-weight: bold;
+  border: none;
+  padding: 10px 25px;
+  color: rgba(255, 255, 255, 0.705);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .fruits {
+    width: 270px;
+  }
+}

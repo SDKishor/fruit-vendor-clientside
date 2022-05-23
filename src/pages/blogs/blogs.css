@@ -1,0 +1,42 @@
+.blogPage {
+  margin: 50px 0px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.questionContainer {
+  width: 70%;
+}
+
+.question {
+  width: 100%;
+  padding: 10px 20px;
+  font-size: 18px;
+  text-align: center;
+}
+.answer {
+  padding: 20px 20px;
+  background-color: #624ef923;
+}
+
+.answer ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.answer li {
+  list-style: circle;
+}
+
+@media (max-width: 700px) {
+  .questionContainer {
+    margin-top: 70px;
+    width: 90%;
+  }
+  .answer ul {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}

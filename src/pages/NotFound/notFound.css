@@ -1,0 +1,24 @@
+.notFound {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.notFound h2 {
+  color: #6ee776;
+  font-size: 150px;
+  margin: 0px;
+}
+
+.notFound p {
+  font-size: 30px;
+  color: red;
+}
+
+.notFound .icon {
+  color: #6ee776;
+  font-size: 150px;
+}

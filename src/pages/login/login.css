@@ -1,0 +1,101 @@
+.loginPage {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 15px -5px #6ee776;
+  padding: 50px;
+  border-radius: 10px;
+}
+
+.login h2 {
+  margin: 0;
+  margin-bottom: 20px;
+}
+.registerLink,
+.forgetLink {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+.forgetLink {
+  margin: 0;
+}
+.forgetLink button {
+  border: none;
+  font-size: 14px;
+  background-color: white;
+  color: #6ee776;
+  cursor: pointer;
+}
+
+.registerLink a {
+  text-decoration: none;
+  color: #6ee776;
+}
+
+.login form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.loginPageBtn,
+.googleBtn,
+.login form input {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  border-radius: 50px;
+}
+
+.login form input {
+  box-sizing: border-box;
+  padding-left: 20px;
+  border: 1px solid #6ee776;
+  background-color: #624ef90e;
+}
+
+.loginPageBtn,
+.googleBtn {
+  background-color: #6ee776;
+  border: none;
+  color: #ffffffce;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.googleBtn {
+  display: flex;
+  align-items: center;
+}
+
+.googleBtn .logo {
+  width: 45px;
+  height: 45px;
+}
+
+.googleBtn .logo img {
+  height: 100%;
+}
+
+button:active {
+  transform: scale(0.99);
+}
+
+.errorText {
+  margin: 0;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: red;
+}
