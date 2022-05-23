@@ -2,12 +2,12 @@ import React, { useEffect, useState } from "react";
 import CustomLink from "../../hooks/CustomLink";
 import "./header.css";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { signOut } from "firebase/auth";
 import auth from "../../firebase.init";
+import { signOut } from "firebase/auth";
 
 export const Header = () => {
   const [openMenu, setOpenMenu] = useState(true);
-  const [user, loading, error] = useAuthState(auth);
+  const [user] = useAuthState(auth);
 
   const handleSignOut = () => {
     signOut(auth);
@@ -32,7 +32,7 @@ export const Header = () => {
   return (
     <header>
       <div className="logo">
-        <span>IT</span> Tutor
+        Fruit's <span>Vendor</span>
       </div>
       <button onClick={toggleMenu} className="hambar">
         |||
