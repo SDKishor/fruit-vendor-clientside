@@ -34,26 +34,30 @@ export const Inventory = () => {
             <TableRow className="headrow">
               <TableCell>Fruits</TableCell>
               <TableCell align="right">Vendor</TableCell>
-              <TableCell align="right">price</TableCell>
-              <TableCell align="right">quantity</TableCell>
-              <TableCell align="right">Sold</TableCell>
+              <TableCell align="center">price</TableCell>
+              <TableCell align="center">quantity</TableCell>
+              <TableCell align="center">Sold</TableCell>
+              <TableCell align="center">manage</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
             {fruits.map((row) => (
               <TableRow
-                key={fruits._id}
+                key={row._id}
                 sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
               >
-                <TableCell component="th" scope="row">
+                <TableCell component="th" scope="row" className="fruitName">
+                  {row.Fruit}
+                </TableCell>
+                <TableCell align="center">{row.vendor}</TableCell>
+                <TableCell align="center">{row.price}</TableCell>
+                <TableCell align="center">{row.quantity}</TableCell>
+                <TableCell align="center">{row.sold}</TableCell>
+                <TableCell align="center">
                   <CustomLink to={"/inventory/" + `${row._id}`}>
-                    {row.Fruit}
+                    <button>Update</button>
                   </CustomLink>
                 </TableCell>
-                <TableCell align="right">{row.vendor}</TableCell>
-                <TableCell align="right">{row.price}</TableCell>
-                <TableCell align="right">{row.quantity}</TableCell>
-                <TableCell align="right">{row.sold}</TableCell>
               </TableRow>
             ))}
           </TableBody>

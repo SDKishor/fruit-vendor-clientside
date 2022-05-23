@@ -41,6 +41,7 @@ export const Home = () => {
             (fruit, index) =>
               index <= 5 && (
                 <FruitItem
+                  key={fruit._id}
                   Fruit={fruit.Fruit}
                   image={fruit.image}
                   description={fruit.description}

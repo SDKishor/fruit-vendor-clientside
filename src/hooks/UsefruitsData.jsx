@@ -4,10 +4,9 @@ export const UsefruitsData = () => {
   const [fruits, setFruits] = useState([]);
 
   useEffect(() => {
-    fetch("./data.json")
+    fetch("http://localhost:5000/fruits")
       .then((res) => res.json())
       .then((data) => setFruits(data));
   }, []);
-  console.log(fruits);
   return [fruits, setFruits];
 };
