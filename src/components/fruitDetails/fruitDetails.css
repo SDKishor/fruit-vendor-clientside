@@ -15,6 +15,7 @@
 }
 
 .imageContainer {
+  z-index: -5;
   box-sizing: border-box;
   width: 50%;
   height: 100%;
@@ -196,10 +197,10 @@
     width: 90%;
   }
   .fruitName h1 {
-    font-size: 50px;
+    font-size: 40px;
   }
   .fruitName h3 {
-    font-size: 30px;
+    font-size: 20px;
     margin-left: 20px;
   }
 

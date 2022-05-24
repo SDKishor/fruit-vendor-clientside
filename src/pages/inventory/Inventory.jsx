@@ -9,22 +9,29 @@ import Paper from "@mui/material/Paper";
 import "./inventory.css";
 import { UsefruitsData } from "../../hooks/UsefruitsData";
 import CustomLink from "../../hooks/CustomLink";
-import { async } from "@firebase/util";
-
-function createData(Fruit, Vendor, price, quantity, Sold) {
-  return { Fruit, Vendor, price, quantity, Sold };
-}
-
-const rows = [
-  createData("Frozen yoghurt", 159, 6.0, 24, 4.0),
-  createData("Ice cream sandwich", 237, 9.0, 37, 4.3),
-  createData("Eclair", 262, 16.0, 24, 6.0),
-  createData("Cupcake", 305, 3.7, 67, 4.3),
-  createData("Gingerbread", 356, 16.0, 49, 3.9),
-];
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
 export const Inventory = () => {
   const [fruits, setFruits] = UsefruitsData();
+
+  const handleDelete = (id) => {
+    const url = `http://localhost:5000/inventory/${id}`;
+    const proceed = window.confirm("are you sure?");
+
+    if (proceed) {
+      fetch(url, {
+        method: "DELETE",
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.deletedCount > 0) {
+            const remaining = fruits.filter((fruit) => fruit._id !== id);
+            setFruits(remaining);
+          }
+        });
+    }
+  };
 
   return (
     <div className="inventory">
@@ -37,7 +44,8 @@ export const Inventory = () => {
               <TableCell align="center">price</TableCell>
               <TableCell align="center">quantity</TableCell>
               <TableCell align="center">Sold</TableCell>
-              <TableCell align="center">manage</TableCell>
+              <TableCell align="center">Manage</TableCell>
+              <TableCell align="center">Delete</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -57,6 +65,14 @@ export const Inventory = () => {
                   <CustomLink to={"/inventory/" + `${row._id}`}>
                     <button>Update</button>
                   </CustomLink>
+                </TableCell>
+                <TableCell align="center">
+                  <button
+                    onClick={() => handleDelete(row._id)}
+                    style={{ backgroundColor: "red", color: "white" }}
+                  >
+                    <FontAwesomeIcon icon={faTrash} />
+                  </button>
                 </TableCell>
               </TableRow>
             ))}

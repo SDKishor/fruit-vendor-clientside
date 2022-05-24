@@ -10,6 +10,8 @@ import { Blogs } from "./pages/blogs/Blogs";
 import { NotFound } from "./pages/NotFound/NotFound";
 import { RequireAuth } from "./hooks/RequireAuth";
 import { FruitDetails } from "./components/fruitDetails/FruitDetails";
+import { AddItems } from "./pages/addItems/AddItems";
+import { MyItem } from "./pages/myItem/MyItem";
 
 function App() {
   return (
@@ -34,6 +36,24 @@ function App() {
           element={
             <RequireAuth>
               <FruitDetails></FruitDetails>
+            </RequireAuth>
+          }
+        />
+
+        <Route
+          path="/myitems"
+          element={
+            <RequireAuth>
+              <MyItem></MyItem>
+            </RequireAuth>
+          }
+        />
+
+        <Route
+          path="/additems"
+          element={
+            <RequireAuth>
+              <AddItems></AddItems>
             </RequireAuth>
           }
         />

@@ -48,6 +48,10 @@ export const Header = () => {
         <div className="links">
           <CustomLink to="/">HOME</CustomLink>
           <CustomLink to="/inventory">Inventory</CustomLink>
+          {user && <CustomLink to="/additems">Add Items</CustomLink>}
+
+          {user && <CustomLink to="/myitems">My Items</CustomLink>}
+
           <CustomLink to="/blogs">BLOGS</CustomLink>
         </div>
 

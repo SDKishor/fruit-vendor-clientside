@@ -4,17 +4,54 @@ import "./fruitDetails.css";
 
 export const FruitDetails = () => {
   const { fruitId } = useParams();
-  console.log(fruitId);
   const [fruit, setFruit] = useState({});
 
   useEffect(() => {
     const url = `http://localhost:5000/inventory/${fruitId}`;
 
-    fetch(url, {})
+    fetch(url)
       .then((res) => res.json())
       .then((data) => setFruit(data));
   }, []);
-  console.log(fruit);
+
+  const handleRestock = (e) => {
+    e.preventDefault();
+    const url = `http://localhost:5000/inventory/${fruitId}`;
+    const restockNum = e.target.restock.value;
+    let temp = { quantity: 1 };
+    temp.quantity = fruit.quantity + Number(restockNum);
+
+    fetch(url, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(temp),
+    })
+      .then((res) => res.json())
+      .then((data) => console.log(data));
+
+    setFruit({ ...fruit, quantity: temp.quantity });
+  };
+
+  const handelDelivary = (_id) => {
+    const url = `http://localhost:5000/inventory/${_id}`;
+    let temp = { quantity: 1 };
+    temp.quantity = fruit.quantity - 1;
+
+    fetch(url, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(temp),
+    })
+      .then((res) => res.json())
+      .then((data) => console.log(data));
+
+    setFruit({ ...fruit, quantity: temp.quantity });
+  };
+
   return (
     <div className="FruitDetails">
       <div className="fruitContainer">
@@ -51,11 +88,16 @@ export const FruitDetails = () => {
             </div>
           </div>
           <div className="btnContainer">
-            <div className="restockContainer">
-              <input type="number" />
+            <form onSubmit={handleRestock} className="restockContainer">
+              <input placeholder="Item Number" type="number" name="restock" />
               <button type="submit">Restock</button>
-            </div>
-            <button className="deliveryBtn">DELIVERED</button>
+            </form>
+            <button
+              onClick={() => handelDelivary(fruit._id)}
+              className="deliveryBtn"
+            >
+              DELIVERED
+            </button>
           </div>
         </div>
       </div>
