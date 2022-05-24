@@ -1,0 +1,95 @@
+.FruitDetails {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fruitContainer {
+  width: 100%;
+  height: 80%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+}
+
+.imageContainer {
+  box-sizing: border-box;
+  width: 50%;
+  height: 100%;
+  position: relative;
+  overflow: none;
+  overflow: hidden;
+}
+
+.imageContainer img {
+  width: 100%;
+}
+.imageContainer .fruitName {
+  height: 100px;
+  width: 100%;
+  margin: 0px;
+  padding: 20px 50px;
+  font-size: 60px;
+  text-align: start;
+  text-transform: uppercase;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+  background-color: #6ee776;
+  display: flex;
+  align-items: center;
+}
+
+.contentContainer {
+  width: 50%;
+  height: 100%;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.vendorinfo {
+  display: flex;
+}
+.vendorImg {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 30px;
+  position: relative;
+}
+
+.vendorImg img {
+  width: 100%;
+}
+
+.vendordateils {
+  text-align: start;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.vendordateils h2 {
+  font-size: 25px;
+  margin: 0px;
+}
+
+.vendordateils h3 {
+  font-size: 20px;
+  font-weight: normal;
+  margin: 0px;
+  margin-top: 5px;
+}
+
+.description {
+  height: 200px;
+  text-align: justify;
+  margin-top: 30px;
+  padding-left: 10px;
+  font-size: 16px;
+}

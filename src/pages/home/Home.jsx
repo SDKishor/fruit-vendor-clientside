@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Footer } from "../../components/footer/Footer";
 import { FruitItem } from "../../components/fruitItem/FruitItem";
@@ -42,6 +41,7 @@ export const Home = () => {
               index <= 5 && (
                 <FruitItem
                   key={fruit._id}
+                  _id={fruit._id}
                   Fruit={fruit.Fruit}
                   image={fruit.image}
                   description={fruit.description}

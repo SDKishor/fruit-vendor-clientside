@@ -11,4 +11,4 @@ repolink:
 
 - I also use some of the icon from the fontawsome liabrary.
 
--I also use matarial ui table
+- I also use matarial ui table show data in inventory.

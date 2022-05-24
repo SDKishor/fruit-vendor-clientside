@@ -9,6 +9,7 @@ import { Inventory } from "./pages/inventory/Inventory";
 import { Blogs } from "./pages/blogs/Blogs";
 import { NotFound } from "./pages/NotFound/NotFound";
 import { RequireAuth } from "./hooks/RequireAuth";
+import { FruitDetails } from "./components/fruitDetails/FruitDetails";
 
 function App() {
   return (
@@ -29,10 +30,10 @@ function App() {
           }
         />
         <Route
-          path="/inventory/:itemId"
+          path="/inventory/:fruitId"
           element={
             <RequireAuth>
-              <Inventory></Inventory>
+              <FruitDetails></FruitDetails>
             </RequireAuth>
           }
         />
