@@ -4,7 +4,7 @@ export const UsefruitsData = () => {
   const [fruits, setFruits] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/fruits")
+    fetch("https://enigmatic-fortress-30309.herokuapp.com/fruits")
       .then((res) => res.json())
       .then((data) => setFruits(data));
   }, []);

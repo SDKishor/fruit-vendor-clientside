@@ -1,10 +1,14 @@
 .myItemPage {
   height: 90vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
 }
 
 @media (max-width: 700px) {
   .myItemPage {
     height: auto;
     margin-top: 100px;
+    grid-template-columns: 1fr;
   }
 }

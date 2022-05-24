@@ -7,7 +7,7 @@ export const FruitDetails = () => {
   const [fruit, setFruit] = useState({});
 
   useEffect(() => {
-    const url = `http://localhost:5000/inventory/${fruitId}`;
+    const url = `https://enigmatic-fortress-30309.herokuapp.com/inventory/${fruitId}`;
 
     fetch(url)
       .then((res) => res.json())
@@ -16,7 +16,7 @@ export const FruitDetails = () => {
 
   const handleRestock = (e) => {
     e.preventDefault();
-    const url = `http://localhost:5000/inventory/${fruitId}`;
+    const url = `https://enigmatic-fortress-30309.herokuapp.com/inventory/${fruitId}`;
     const restockNum = e.target.restock.value;
     let temp = { quantity: 1 };
     temp.quantity = fruit.quantity + Number(restockNum);
@@ -35,7 +35,7 @@ export const FruitDetails = () => {
   };
 
   const handelDelivary = (_id) => {
-    const url = `http://localhost:5000/inventory/${_id}`;
+    const url = `https://enigmatic-fortress-30309.herokuapp.com/inventory/${_id}`;
     let temp = { quantity: 1 };
     temp.quantity = fruit.quantity - 1;
 

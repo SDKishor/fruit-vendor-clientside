@@ -6,45 +6,39 @@ export const Blogs = () => {
     <div className="blogPage">
       <div className="questionContainer">
         <h3 className="question">
-          Q1: Difference between authorization and authentication?
+          Q1: Difference between Javascript and node js?
         </h3>
         <p className="answer">
-          authorization is a process which varify what file, data a user can
-          access. <br /> <br />
-          authentication is a process of varifying who a user is.
+          Javascript is a programming language that run in browser <br /> <br />
+          Node js is a javascript runtime environment that lets Javascript to be
+          run on the server-side.
         </p>
         <h3 className="question">
-          Q2: Why are you using firebase? What other options do you have to
-          implement authentication?
+          Q2: When should you use nodejs and when should you use mongodb?
         </h3>
         <div className="answer">
-          i am using firebase because it is easy to use, have many function
-          beside authentication, popular with other web devloper. <br /> <br />
-          there are many other option beside firebase like,
-          <ul>
-            <li>Auth0</li>
-            <li>Mongodb</li>
-            <li>passport</li>
-            <li>Octa</li>
-            <li>JSON web token</li>
-          </ul>
-          and More.
+          when we want to write some kind of stand alone program or server then
+          we should go for Nodejs <br /> <br />
+          if i want to store data in a way that doesn't need very complex
+          relation with each other then we should go for mongodb database.
         </div>
         <h3 className="question">
-          Q3: What other services does firebase provide other than
-          authentication?
+          Q3: Differences between sql and nosql databases.?
         </h3>
         <div className="answer">
-          There are many services that firebase provide other then
-          authentication. Like,
-          <ul>
-            <li>Firebase Hosting</li>
-            <li>Firebase Database</li>
-            <li>Firebase Storage</li>
-            <li>Firebase app analysis</li>
-            <li>Firebase app testing</li>
-          </ul>
-          and many other functions.
+          Sql database are table-based. it is better for data relationship. it
+          is batter for multi row transections
+          <br /> <br />
+          Nosql databse are document. Nosql is batter for unstuctured data like
+          json. it is not good for complex data relationship.
+        </div>
+        <h3 className="question">
+          Q3: What is the purpose of jwt and how does it work?
+        </h3>
+        <div className="answer">
+          JSON Web Token is a way to share security information between two
+          parties like a clint and a server. it is used to protect data and deny
+          data access to unauthorized user
         </div>
       </div>
     </div>

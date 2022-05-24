@@ -38,10 +38,7 @@ export const Header = () => {
         |||
       </button>
       {/* navigation bar */}
-      <nav
-        style={user && { height: "300px" }}
-        className={openMenu ? "" : "hidden"}
-      >
+      <nav className={openMenu ? "" : "hidden"}>
         <div className="logo">
           Fruit's <span>Vendor</span>
         </div>

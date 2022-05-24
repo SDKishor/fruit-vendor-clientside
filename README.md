@@ -1,8 +1,8 @@
 # Fruits vendor website
 
-live website:
+live website:(click here)[https://fruit-s-vendor.web.app]
 
-repolink:
+repolink: --
 
 ## what i do in this project
 
@@ -12,3 +12,5 @@ repolink:
 - I also use some of the icon from the fontawsome liabrary.
 
 - I also use matarial ui table show data in inventory.
+
+- store data in mongo db

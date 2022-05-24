@@ -11,12 +11,13 @@ import { UsefruitsData } from "../../hooks/UsefruitsData";
 import CustomLink from "../../hooks/CustomLink";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import { toast } from "react-toastify";
 
 export const Inventory = () => {
   const [fruits, setFruits] = UsefruitsData();
 
   const handleDelete = (id) => {
-    const url = `http://localhost:5000/inventory/${id}`;
+    const url = `https://enigmatic-fortress-30309.herokuapp.com/inventory/${id}`;
     const proceed = window.confirm("are you sure?");
 
     if (proceed) {
@@ -28,6 +29,7 @@ export const Inventory = () => {
           if (data.deletedCount > 0) {
             const remaining = fruits.filter((fruit) => fruit._id !== id);
             setFruits(remaining);
+            toast("Item deleted");
           }
         });
     }

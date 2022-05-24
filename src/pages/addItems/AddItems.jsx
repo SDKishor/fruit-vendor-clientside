@@ -6,7 +6,7 @@ export const AddItems = () => {
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
     console.log(data);
-    const url = "http://localhost:5000/additems";
+    const url = "https://enigmatic-fortress-30309.herokuapp.com/additems";
     let temp = data;
     temp.sold = 0;
     temp.price = `$${data.price}`;
