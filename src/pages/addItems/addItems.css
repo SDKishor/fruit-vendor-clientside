@@ -1,5 +1,5 @@
 .addItemPage {
-  height: 90vh;
+  height: 700px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -25,6 +25,7 @@
   height: 50px;
   font-weight: bold;
   width: 40%;
+  min-width: 200px;
   border: none;
   background-color: #6ee776;
   border-radius: 10px;

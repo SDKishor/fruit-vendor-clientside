@@ -4,7 +4,24 @@ import { useForm } from "react-hook-form";
 
 export const AddItems = () => {
   const { register, handleSubmit } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    console.log(data);
+    const url = "http://localhost:5000/additems";
+    let temp = data;
+    temp.sold = 0;
+    temp.price = `$${data.price}`;
+    console.log(temp);
+
+    fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(temp),
+    })
+      .then((res) => res.json())
+      .then((data) => console.log(data));
+  };
   return (
     <div className="addItemPage">
       <form className="addItemForm" onSubmit={handleSubmit(onSubmit)}>
@@ -14,19 +31,19 @@ export const AddItems = () => {
           {...register("vendor", { required: true, maxLength: 80 })}
         />
         <input
-          type="text"
+          type="email"
           placeholder="Email"
-          {...register("Email", { required: true, pattern: /^\S+@\S+$/i })}
+          {...register("email", { required: true, pattern: /^\S+@\S+$/i })}
         />
         <input
           type="text"
           placeholder="Fruit Name"
-          {...register("Fruit Name", { required: true, maxLength: 12 })}
+          {...register("Fruit", { required: true, maxLength: 12 })}
         />
         <input
           type="url"
           placeholder="Fruit image (URL)"
-          {...register("Fruit image", { required: true })}
+          {...register("image", { required: true })}
         />
         <input
           type="number"
