@@ -1,8 +1,12 @@
 # Fruits vendor website
 
-live website:(click here)[https://fruit-s-vendor.web.app]
+A fruit selling website
 
-repolink: --
+Clint site Code Link: [CODE LINK](https://github.com/SDKishor/fruit-vendor-clientside)
+
+Server site Code Link: [CODE LINK](https://github.com/SDKishor/fruit-vendor-Serverside)
+
+Live Website Link: [Website](https://fruit-s-vendor.web.app)
 
 ## what i do in this project
 
